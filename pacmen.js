@@ -26,13 +26,14 @@ function makePac() {
     newimg.style.position = 'absolute';
     newimg.src = 'Images/PacMan1.png';
     newimg.width = 100;
-    newimg.style.top = position.y;
-    newimg.style.left = position.x;
+    newimg.style.top = position.y + 'px';
+    newimg.style.left = position.x + 'px';
     
 
 
     // add new Child image to game
     game.appendChild(newimg);
+    console.log(newimg);
    
     // return details in an object
     return {
@@ -50,8 +51,8 @@ function update() {
         item.position.y += item.velocity.y;
         console.log(item);
 
-        item.newimg.style.left = item.position.x;
-        item.newimg.style.top = item.position.y;
+        item.newimg.style.left = item.position.x + 'px';
+        item.newimg.style.top = item.position.y + 'px';
     });
     setTimeout(update, 20);
 }
